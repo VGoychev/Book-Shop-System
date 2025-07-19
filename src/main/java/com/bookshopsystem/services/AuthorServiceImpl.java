@@ -38,4 +38,9 @@ public class AuthorServiceImpl implements AuthorService{
     public List<AuthorSummaryDto> getSummary() {
         return authorRepository.getSummary();
     }
+
+    @Override
+    public List<Author> findAllByFirstNameEndsWith(String suffix) {
+        return authorRepository.findAllByFirstNameEndsWith(suffix);
+    }
 }

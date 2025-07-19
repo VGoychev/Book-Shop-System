@@ -12,4 +12,6 @@ public interface AuthorService {
 
     List<Author> findActiveBefore(int year);
     List<AuthorSummaryDto> getSummary();
+
+    List<Author> findAllByFirstNameEndsWith(String suffix);
 }

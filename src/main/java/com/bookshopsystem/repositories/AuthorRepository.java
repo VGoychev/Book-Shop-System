@@ -15,4 +15,6 @@ public interface AuthorRepository extends JpaRepository<Author, Integer>{
 
     @Query("SELECT a.firstName, a.lastName, size(a.books) FROM Author a ORDER BY SIZE(a.books) DESC")
     List<AuthorSummaryDto> getSummary();
+
+    List<Author> findAllByFirstNameEndsWith(String suffix);
 }
